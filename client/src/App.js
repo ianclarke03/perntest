@@ -11,7 +11,7 @@ import ListUsernames from "./components/ListUsernames";
 function App() {
   return (
   <Fragment>
-    <div classname="container">
+    <div className="container">
       <InputUsername />
       <ListUsernames />
     </div>

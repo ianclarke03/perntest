@@ -2,27 +2,30 @@ import React, { Fragment, useEffect, useState } from "react";
 
 const ListUsernames = () => {
 
-    const [usernames, setUsernames] = useState([]);
+    const [users, setUsers] = useState([]);
 
-    const getUsernames = async () => {
+    const getUsers = async () => {
         try {
             
             const response = await fetch("http://localhost:4000/users");
             const jsonData = await response.json();
 
-            setUsernames(jsonData);
+            setUsers(jsonData);
         } catch (err) {
             console.error(err.message);
         }
     };
 
     useEffect(() => {
-        getUsernames();
-    });
+        getUsers();
+    }, []);
 
-    console.log(usernames);
+
+    console.log(users);
+
     return (
     <Fragment>
+        {" "}
           <table className="table mt-5 text-center">
             <thead>
             <tr>
@@ -37,6 +40,13 @@ const ListUsernames = () => {
                     <td>Doe</td>
                     <td>john@example.com</td>
                 </tr> */}
+                {users.map( users => (
+                    <tr>
+                        <td>{users.description}</td>
+                        <td>Edit</td>
+                        <td>Delete</td>
+                    </tr>
+                ))}
 
             </tbody>
         </table>
