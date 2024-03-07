@@ -2,17 +2,19 @@
 
 ## Server
 
-1. **Install TypeScript globally if you haven't already done so:** 
+1. **Install TypeScript globally if you haven't already done so:** npm install -g typescript
 
-2. **Install dependencies:** npm install -g typescript
+2. **Install dependencies:** cd server
+npm install
 
-3. **Run the server:**
+3. **Run the server:** ts-node index.ts
 
 ## Frontend
 
-1. **Install dependencies:**
+1. **Install dependencies:** cd frontend
+npm install
 
-2. **Run the frontend server:**
+2. **Run the frontend server:** nodemon index.js
 
 This will launch the web application on localhost:3000.
 
