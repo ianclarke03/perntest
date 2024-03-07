@@ -1,5 +1,7 @@
 # Test PERN Stack Application
 
+make sure you have Node.js installed before running these commands
+
 ## Server
 
 1. **Install TypeScript globally if you haven't already done so:** npm install -g typescript
