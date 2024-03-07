@@ -4,7 +4,7 @@
 
 1. **Install TypeScript globally if you haven't already done so:** 
 
-2. **Install dependencies:** 
+2. **Install dependencies:** npm install -g typescript
 
 3. **Run the server:**
 
