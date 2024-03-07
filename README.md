@@ -1,6 +1,6 @@
 # Test PERN Stack Application
 
-make sure you have Node.js installed before running these commands
+Make sure you have Node.js installed before running these commands.
 
 ## Server
 
