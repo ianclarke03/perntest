@@ -5,6 +5,7 @@
 1. **Install TypeScript globally if you haven't already done so:** npm install -g typescript
 
 2. **Install dependencies:** cd server
+
 npm install
 
 3. **Run the server:** ts-node index.ts
@@ -12,6 +13,7 @@ npm install
 ## Frontend
 
 1. **Install dependencies:** cd frontend
+
 npm install
 
 2. **Run the frontend server:** nodemon index.js
