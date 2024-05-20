@@ -45,9 +45,10 @@ gmailPass = "xeur affl zdkr yjwg" # Gmail application-specific password
 - When connected, you should be able to see that the flask app has been ran in the console. You will see something similar to `(19168) wsgi starting up on http://127.0.0.1:5000/`, and should click on the link to connect to the webhook.
 
 
+## Server Setup
+
 Make sure you have Node.js installed before running the following commands.
 
-## Server Setup
 
 To run the server, navigate to the “server” directory and follow these steps:
 
