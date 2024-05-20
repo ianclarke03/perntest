@@ -1,32 +1,55 @@
-# Test PERN Stack Application
+# Final Project Build Instructions
 
 Make sure you have Node.js installed before running these commands.
 
-## Server
+## Server Setup
 
-1. **Install TypeScript globally if you haven't already done so:** npm install -g typescript
+To run the server, navigate to the “server” directory and follow these steps:
 
-2. **Install dependencies:** cd server
+1. **Install ts-node**:
+   - Ensure ts-node is installed:
+     ```sh
+     npm install -g ts-node
+     ```
+     Or if you prefer to install it locally:
+     ```sh
+     npm install ts-node --save-dev
+     ```
+   - Verify the installation:
+     After installing ts-node, you can verify its installation by running:
+     ```sh
+     ts-node --version
+     ```
 
-npm install
+2. **Install the 'cors' module**:
+   ```sh
+   npm install cors
 
-3. **Run the server:** ts-node index.ts
+Ensure that the types for 'cors' are available:
+Sometimes TypeScript requires type declarations for modules. In this case, 'cors' might not have its own types, but you can install the types from DefinitelyTyped:
+```sh
+npm install @types/cors --save-dev
+ ```
 
-## Frontend
+3.**Begin running the server**:
+```sh
+nodemon index.ts
+ ```
 
-1. **Install dependencies:** cd frontend
 
-npm install
 
-2. **Run the frontend server:** nodemon index.js
+## Client Setup
 
-This will launch the web application on localhost:3000.
+To run the client, navigate to the “frontend” directory and follow these steps:
 
-## Adding Your Username to the Database
+1. **Install TypeScript as a development dependency**:
+   ```sh
+   npm install typescript --save-dev
+```
 
-1. **Access the web application:** 
-Navigate to localhost:3000 in your web browser.
-
-2. **Sign Up:** 
-Click the "Sign Up" button and input your desired username.
-
+2. **Begin running the client**:
+     ```sh
+     nodemon index.ts
+     ```
+ - Access the web application:
+     Navigate to localhost:3000 in your web browser.
