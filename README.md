@@ -1,6 +1,51 @@
 # Final Project Build Instructions
 
-Make sure you have Node.js installed before running these commands.
+
+
+## Alpaca Client Changes
+
+For the project to connect to the database and interact with external services correctly, certain configuration changes are required in `alpaca_client.py`, libraries must be installed, and specific variables at the top of the file should be updated with appropriate values.
+
+### Python Libraries Configuration
+
+### Installation Script
+
+Run the following pip command in your terminal to install all required libraries:
+
+```bash
+pip install asyncio Flask flask_socketio websockets openai asyncpg aiosmtplib
+```
+
+### Postgres Configuration
+
+The Postgres configuration within `alpaca_client.py` needs to be updated to reflect the DB setup. This includes the host, user, password, and database name. The exact values for these configurations will depend on how your system and Postgres server are set up.
+
+#### Example Configuration
+
+```python
+username = 'postgres'
+dbPass = "Your password here" #Must be changed to your postgres password
+db = 'newsData'
+hostname = 'localhost'
+```
+
+#### Required Variables
+
+In addition to configuring the database connection, there are several variables at the top of alpaca_client.py that must be replaced with actual values. These are critical for the functionality related to Alpaca API, OpenAI, and Gmail notifications.
+
+```python
+openAi = "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" # OpenAI API Key
+gmailPass = "xeur affl zdkr yjwg" # Gmail application-specific password
+```
+
+## Notes
+
+- It is important to replace `"Your password here"`, the placeholder for `dbPass`, with your actual database password to ensure that the application can connect to the PostgreSQL database successfully, as well as the other respective variables
+- The gmail account is set to send emails from my email account, mshvorin@gmail.com, and until the ticker subscription is implimented, unless you add a row with your email to the users table, you will be unable to recieve any emails (as you are not subscribed to them), but there is output in the console for emails being sent out.
+- When connected, you should be able to see that the flask app has been ran in the console. You will see something similar to `(19168) wsgi starting up on http://127.0.0.1:5000/`, and should click on the link to connect to the webhook.
+
+
+Make sure you have Node.js installed before running the following commands.
 
 ## Server Setup
 
